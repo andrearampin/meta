@@ -7,8 +7,8 @@ const Welcome: NextPage = () => {
 
   return (
     <div className="flex flex-col items-center pt-10">
-      {address && <Button cb={disconnectWallet} />}
-      {!address && <Button cb={() => connectWallet('injected')} />}
+      {address && <Button cb={disconnectWallet}>Disconnect (address {address})</Button>}
+      {!address && <Button cb={() => connectWallet('injected')}>Connect</Button>}
     </div>
   );
 };
